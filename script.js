@@ -26,15 +26,15 @@ Timer = () => {
         minute.value = min;
         second.value = sec;
 
-    } else {
-
+    }
+     else {
         disp.innerText = "Timer Out  !!";
     }
 }
 
 start.addEventListener("click", () => {
     clearInterval(interval);
-    setInterval(Timer, 1000);
+    interval = setInterval(Timer, 1000);
 
     disp.innerText = "Timer Started";
 });
@@ -47,4 +47,4 @@ reset.addEventListener("click", () => {
     second.value = 0;
 
     disp.innerText = "Timer";
-})
+});
